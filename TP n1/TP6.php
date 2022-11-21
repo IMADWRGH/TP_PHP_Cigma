@@ -55,12 +55,6 @@
         </tr>";
         foreach ($_GET as $i) {
             echo "<tr>";
-            foreach ($i as $j => $elm) {
-                echo " <td>$elm</td>
-                <td>$elm</td>
-                <td>$elm</td>
-                <td>$elm</td>";
-            }
             echo "</tr>";
         }
         echo " <tr>
