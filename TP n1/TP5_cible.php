@@ -10,6 +10,7 @@
 
 <body>
     <?php
+    echo "User :" . $_GET["user"] . "<br> Res :" . $_POST["res"];
     ?>
 </body>
 
