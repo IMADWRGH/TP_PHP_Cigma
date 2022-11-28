@@ -15,7 +15,7 @@
             <label for="d_achat">Date d'achat :</label>
             <input type="date" name="d_achat"><br><br>
             <label for="n_prd">Nombre des Produits :</label>
-            <input type="number" name="n_prd"><br><br>
+            <input type="number" name="n_prd" id="nbr"><br><br>
             <input type="submit" value="Envoyer" name="valider">
             <input type="reset" value="Annuler">
         </form>
@@ -36,16 +36,18 @@
             <label for='pu'>Prix unitaire:</label>
             <input type='number' name='pu'><br><br>
             <label for='qa'>Quantité achetée: :</label>
-            <input type='number' name='qa'><br><br>";
+            <input type='number' name='qa'><br><br>
+                 </fieldset>";
         }
         echo
         " <input type='submit' value='Envoyer' name='valider1'>
             <input type='reset' value='Annuler'>
-              </form>
-                </fieldset>";;
+              </form>";
     } ?>
+
     <?php
     if (isset($_GET["valider1"])) {
+        $i = 0;
         echo " <table style='border:1px black solid ;width:100%;'>
         <tr style='background-color: black;color:white;'>
             <th>Référence</th>
@@ -53,9 +55,13 @@
             <th>Prix unitaire</th>
             <th>Quantité achetée:</th>
         </tr>";
-        foreach ($_GET as $i) {
-            echo "<tr>";
-            echo "</tr>";
+        foreach ($_GET as $data) {
+            echo "<tr>;
+            <td> $data </td>
+            <td> $data </td>
+            <td> $data </td>
+            <td> $data </td>
+            </tr>";
         }
         echo " <tr>
             <th colspan='2'>Total</th>
@@ -63,8 +69,8 @@
             <td></td>
         </tr>
     </table>";
-    }
-    ?>
+        $i++;
+    } ?>
 </body>
 
 </html>
