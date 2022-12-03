@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Saisi</title>
+    <style>
+        form{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <form action="ajout.php" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom"><br><br>
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom"><br><br>
+        <label for="nom">Email :</label>
+        <input type="email" name="nom"><br><br>
+        <input type="submit" value="Envoyer" name="valider">
+        <input type="reset" value="Annuler">
+    </form>
+</body>
+</html>
