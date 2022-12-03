@@ -6,5 +6,5 @@ if (isset($_POST["valider"])) {
     $con = mysqli_connect("127.0.0.1", "root", "", "tpvisiteurs");
     $req = "INSERT INTO `visiteurs`(`NOM`, `PRENOM`, `EMAIL`) VALUES ('$nom','$prenom','$email')";
     mysqli_query($con, $req);
-    header('location : Affichage.php');
+    header('location:Affichage.php');
 }
