@@ -28,8 +28,6 @@
         foreach ($query_run as $data) {
     ?>
             <form action="Modifier.php?num=<?= $data["ID_VISITEUR"] ?>" method="post">
-                <label for="num">Numéro :</label>
-                <input type="text" value="<?= $data["ID_VISITEUR"] ?>"><br><br>
                 <label for="nom">Nom :</label>
                 <input type="text" name="nom" value="<?= $data["NOM"] ?>"><br><br>
                 <label for="prenom">Prenom :</label>
