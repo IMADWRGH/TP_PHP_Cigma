@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affichage des données</title>
+    <style>
+        table {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,8 +20,7 @@
             <th>Nom</th>
             <th>Prenom</th>
             <th>Email</th>
-            <th>option</th>
-            <th>option</th>
+            <th collspan=2>option</th>
         </tr>
         <?php
         $con = mysqli_connect("127.0.0.1", "root", "", "tpvisiteurs");
@@ -31,8 +35,8 @@
                     <td><?= $data["NOM"] ?></td>
                     <td><?= $data["PRENOM"] ?></td>
                     <td><?= $data["EMAIL"] ?></td>
-                    <td><a href="Editer.php">Edit</a></td>
-                    <td><a href="Supprime.php">Sup</a></td>
+                    <td><a href="Editer.php?num=<?= $data["ID_VISITEUR"] ?>">Edit</a></td>
+                    <td><a href="Supprime.php?num=<?= $data["ID_VISITEUR"] ?>]">Sup</a></td>
                 </tr>
         <?php
             }

@@ -7,5 +7,5 @@ if (isset($_POST["valider"])) {
     $req = "INSERT INTO `visiteurs`(`NOM`, `PRENOM`, `EMAIL`) VALUES ('$nom','$prenom','$email')";
     $result = mysqli_query($con, $req);
     //var_dump($result);
-    $result != 0 ?  print "<h1>Data save</h1>" :  print "<h1>Error</h1>";
+    header('location : Affichage.php');
 }
