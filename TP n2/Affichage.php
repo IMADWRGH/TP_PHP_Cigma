@@ -43,6 +43,7 @@
         }
         ?>
     </table>
+    <center><a href="./Saisie.html">Ajouter un visiteur</a></center>
 </body>
 
 </html>
