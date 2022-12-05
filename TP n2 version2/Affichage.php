@@ -31,12 +31,7 @@
             <th>Prenom</th>
             <th>E-mail</th>
         </tr>
-        <tr>
-            <td>Num</td>
-            <td>Nom</td>
-            <td>Prenom</td>
-            <td>E-mail</td>
-        </tr>
+        <tr></tr>
     </table>
 </body>
 
