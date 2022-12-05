@@ -7,7 +7,7 @@ function ajoute($name, $prenom, $email)
     $req = "INSERT INTO 'visiteurs' VALUES('$name','$prenom','$email') ";
     return mysqli_query($con, $req);
 }
-function modifie($num)
+function modifie()
 {
     global $con;
     //$req = "UPDATE `visiteurs` SET `NOM`=$name,`PRENOM`=$prenom,`EMAIL`=$email WHERE `ID_VISITEUR`=$num ";
