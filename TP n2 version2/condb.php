@@ -1,5 +1,6 @@
 <?php
-function ($name_db) {
+function connet($name_db)
+{
     $con = mysqli_connect("localhost", "root", "", $name_db);
 
     if (!$con) {
