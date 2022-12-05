@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saisie des données</title>
+<style>
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        background-color: #ccc;
+        padding: 20px;
+        border-radius: 25px;
+    }
+    input[type=submit],input[type=reset] {
+        background-color: white;
+        border: none;
+        padding: 10px;
+    }
+     input[type=submit]:hover{
+        color: #ccc;
+        background: green;
+        
+     }
+       input[type=reset]:hover{
+        color: #ccc;
+        background: red;
+        
+     }
+</style>
 </head>
+
 <body>
-    
+    <form action="ajout.php" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom"><br><br>
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom"><br><br>
+        <label for="email">Email :</label>
+        <input type="email" name="email"><br><br>
+        <input type="submit" value="Envoyer" name="valider">
+        <input type="reset" value="Annuler">
+    </form>
 </body>
 </html>
