@@ -19,3 +19,9 @@ function supp($num)
     $req = "DELETE FROM `visiteurs` WHERE `ID_VISITEUR`=$num ";
     return mysqli_query($con, $req);
 }
+function afficher()
+{
+    global $con;
+    $req = "SELECT * FROM `visiteurs` WHERE `ID_VISITEUR`= ";
+    return mysqli_query($con, $req);
+}
