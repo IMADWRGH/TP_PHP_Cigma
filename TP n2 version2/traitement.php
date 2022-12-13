@@ -7,11 +7,11 @@ function ajoute($name, $prenom, $email)
     $req = "INSERT INTO 'visiteurs' VALUES('$name','$prenom','$email') ";
     return mysqli_query($con, $req);
 }
-function modifie()
+function modifie($num, $name, $prenom, $email)
 {
     global $con;
-    //$req = "UPDATE `visiteurs` SET `NOM`=$name,`PRENOM`=$prenom,`EMAIL`=$email WHERE `ID_VISITEUR`=$num ";
-    //return mysqli_query($con, $req);
+    $req = "UPDATE `visiteurs` SET `NOM`=$name,`PRENOM`=$prenom,`EMAIL`=$email WHERE `ID_VISITEUR`=$num ";
+    return mysqli_query($con, $req);
 }
 function supp($num)
 {
@@ -19,9 +19,10 @@ function supp($num)
     $req = "DELETE FROM `visiteurs` WHERE `ID_VISITEUR`=$num ";
     return mysqli_query($con, $req);
 }
-function afficher()
+
+function afficher($num)
 {
     global $con;
-    $req = "SELECT * FROM `visiteurs` WHERE `ID_VISITEUR`= ";
+    $req = "SELECT * FROM `visiteurs` WHERE `ID_VISITEUR`= $num";
     return mysqli_query($con, $req);
 }
