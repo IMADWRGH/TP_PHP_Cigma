@@ -1,6 +1,6 @@
 <?php
 include_once "condb.php";
-$con = connet("tpvisiteur");
+$con = connet("tpvisiteurs");
 
 function ajoute($name, $prenom, $email)
 {
