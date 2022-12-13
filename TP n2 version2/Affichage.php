@@ -23,8 +23,9 @@
     </style>
 </head>
 <?php
-include_once "functions.php";
-$req = lister();
+/*include_once "functions.php";
+$req = lister();*/
+
 ?>
 
 <body>
@@ -44,8 +45,8 @@ $req = lister();
                 <td><?= $result[2] ?></td>
                 <td><?= $result[3] ?></td>
                 <td><?= $result[4] ?></td>
-                <td><a href="#">Edit</a></td>
-                <td><a href="#">Supp</a></td>
+                <td><a href="Editer.php?func=edit & num=<?= $num["ID_VISITEUR"] ?>">Edit</a></td>
+                <td><a href="Supprime.php?func=supp & num=<?= $num["ID_VISITEUR"] ?>">Supp</a></td>
             </tr>
         <?php
         }
