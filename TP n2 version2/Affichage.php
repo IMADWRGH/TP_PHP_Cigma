@@ -25,7 +25,9 @@
 <?php
 /*include_once "functions.php";
 $req = lister();*/
-
+$con = mysqli_connect("localhost", "root", "", "tpvisiteurs");
+$query = "SELECT * FROM `visiteurs`";
+$req = mysqli_query($con, $query);
 ?>
 
 <body>
