@@ -23,7 +23,7 @@
     </style>
 </head>
 <?php
-include_once "traitement.php";
+include_once "functions.php";
 $req = lister();
 ?>
 
@@ -34,6 +34,7 @@ $req = lister();
             <th>Nom</th>
             <th>Prenom</th>
             <th>E-mail</th>
+            <th colspan="2">Option</th>
         </tr>
         <?php
         while ($result = mysqli_fetch_row($req)) {
