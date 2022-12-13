@@ -22,6 +22,10 @@
         }
     </style>
 </head>
+<?php
+include_once "traitement.php";
+$req = lister();
+?>
 
 <body>
     <table>
@@ -31,7 +35,20 @@
             <th>Prenom</th>
             <th>E-mail</th>
         </tr>
-        <tr></tr>
+        <?php
+        while ($result = mysqli_fetch_row($req)) {
+        ?>
+            <tr>
+                <td><?= $result[1] ?></td>
+                <td><?= $result[2] ?></td>
+                <td><?= $result[3] ?></td>
+                <td><?= $result[4] ?></td>
+                <td><a href="#">Edit</a></td>
+                <td><a href="#">Supp</a></td>
+            </tr>
+        <?php
+        }
+        ?>
     </table>
 </body>
 
