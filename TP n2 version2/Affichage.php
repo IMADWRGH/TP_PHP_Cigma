@@ -43,12 +43,12 @@ $req = mysqli_query($con, $query);
         while ($result = mysqli_fetch_row($req)) {
         ?>
             <tr>
+                <td><?= $result[0] ?></td>
                 <td><?= $result[1] ?></td>
                 <td><?= $result[2] ?></td>
                 <td><?= $result[3] ?></td>
-                <td><?= $result[4] ?></td>
-                <td><a href="Editer.php?func=edit & num=<?= $num["ID_VISITEUR"] ?>">Edit</a></td>
-                <td><a href="Supprime.php?func=supp & num=<?= $num["ID_VISITEUR"] ?>">Supp</a></td>
+                <td><a href="Editer.php?func=edit & num=<?= $result["ID_VISITEUR"] ?>">Edit</a></td>
+                <td><a href="Supprime.php?func=supp & num=<?= $result["ID_VISITEUR"] ?>">Supp</a></td>
             </tr>
         <?php
         }
