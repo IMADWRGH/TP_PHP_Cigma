@@ -21,7 +21,7 @@ function insert($data)
 function update($data)
 {
     global $con;
-    $req = "UPDATE `absence` SET semaine='{$data[0]}',cne='{$data[1]}', nbr_abs ='{$data[2]}' WHERE semaine='{$data[0]}'";
+    $req = "UPDATE `absence` SET 'semaine'='{$data[0]}',cne='{$data[1]}', nbr_abs ='{$data[2]}' WHERE semaine='{$data[0]}'";
     return mysqli_query($con, $req);
 }
 
