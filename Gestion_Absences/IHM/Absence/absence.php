@@ -53,11 +53,14 @@ $req = Select();
     </table>
     <center> <a href="../../index.php"><i class="fa-solid fa-house"></i> Reteur</a></center>
     <h1>Affichage la liste des eleves triee selon l'oredre croissant de leurs absences</h1>
-    <form action="../../Traitement/Absence.php?action=delete" method="post">
+    <form action="" method="post">
         <label for="snm">Semaine : </label>
         <input type="text" name="snm">
         <input type="submit" value="Valider">
         <input type="reset" value="Annuler">
+        <?php
+
+        ?>
     </form>
 </body>
 
