@@ -31,3 +31,10 @@ function delete($snm)
     $req = "DELETE FROM `absence` WHERE semaine =$snm";
     return mysqli_query($con, $req);
 }
+
+function nbr_snm($snm)
+{
+    global $con;
+    $req = "SELECT e.cne,e.nom,e.prenom,a.nbr_abs FROM eleve e ,absence a WHERE e.cne=a.cne AND a.semaine=$snm;";
+    return mysqli_query($con, $req);
+}

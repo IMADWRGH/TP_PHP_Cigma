@@ -10,7 +10,7 @@
     <style>
         h1 {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
         table,
@@ -19,7 +19,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -54,12 +54,32 @@ $req = Select();
     <center> <a href="../../index.php"><i class="fa-solid fa-house"></i> Reteur</a></center>
     <h1>Affichage la liste des eleves triee selon l'oredre croissant de leurs absences</h1>
     <form action="" method="post">
-        <label for="snm">Semaine : </label>
-        <input type="text" name="snm">
-        <input type="submit" value="Valider">
-        <input type="reset" value="Annuler">
+        <label for="snm">Semaine : </label>&nbsp;&nbsp;
+        <input type="text" name="snm">&nbsp;&nbsp;
+        <input type="submit" value="Valider" name="sub">&nbsp;&nbsp;
+        <input type="reset" value="Annuler"><br><br>
         <?php
+        if (isset($_POST["sub"])) {
+            $req = nbr_snm($_POST["snm"]);
+            echo "<h2>Les absences de la semaine " . $_POST['snm'] . "</h2>";
+            echo "  <table border='2'>
+            <tr>
+                <th>CNE</th>
+                <th>Nom et Prenom</th>
+                <th>Nobmre d'absences</th>
+            </tr>";
+            while ($result = mysqli_fetch_row($req)) {
+                echo "  <tr>";
+                echo "
+                    <td>$result[0]</td>
+                    <td> $result[1] $result[2]</td>
+                    <td>$result[3]</td>";
+                echo "  </tr>";
+            }
 
+
+            echo "</table>";
+        }
         ?>
     </form>
 </body>
