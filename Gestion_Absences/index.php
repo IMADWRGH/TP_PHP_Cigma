@@ -10,14 +10,24 @@
         a {
             text-decoration: none;
             font-size: 80px;
-            text-align: center;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        div a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
         }
     </style>
 </head>
 
 <body>
-    <a href="./IHM/Eleve/eleve.php">Gestion des eleves</a> <br><br>
-    <a href="./IHM/Absence/absence.php">Gestion d'absences</a>
+    <div>
+        <a href="./IHM/Eleve/eleve.php">Gestion des eleves</a>
+        <a href="./IHM/Absence/absence.php">Gestion d'absences</a>
+    </div>
 </body>
 
 </html>
