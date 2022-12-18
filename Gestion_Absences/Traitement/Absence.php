@@ -15,4 +15,4 @@ switch ($action) {
         update(array_values($_POST));
         break;
 }
-//header('Location:../IHM/Absence/absence.php');
+header('Location:../IHM/Absence/absence.php');
