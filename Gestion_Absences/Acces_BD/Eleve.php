@@ -31,3 +31,10 @@ function Select($cne = 0)
         $req .= " WHERE    cne   = $cne ";
     return mysqli_query($con, $req);
 }
+
+function nbr_elv($snm)
+{
+    global $con;
+    $req = "SELECT a.semaine,a.nbr_abs,e.cne FROM eleve e ,absence a WHERE e.cne=a.cne AND a.semaine=$snm";
+    return mysqli_query($con, $req);
+}
