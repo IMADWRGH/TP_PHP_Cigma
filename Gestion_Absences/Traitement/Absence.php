@@ -11,7 +11,7 @@ switch ($action) {
         delete($_GET["snm"]);
         break;
     case "update":
-        update($_POST);
+        update(array_values($_POST));
         break;
 }
 header('Location:../IHM/Absence/absence.php');
