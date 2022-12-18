@@ -65,13 +65,14 @@ $req = Select();
     <?php
     if (isset($_POST["sub"])) {
         $req = nbr_elv($_POST["snm"]);
-        echo "<h1>Liste d'absences de l'eleve " . $result[2] . "</h1>";
-        echo "<table border='2'>
+        while ($result = mysqli_fetch_row($req)) {
+            echo "<h1>Liste d'absences de l'eleve " . $result[2] . "</h1>";
+            echo "<table border='2'>
             <tr>
                 <th>Semaine</th>
                 <th>Nobmre d'absences</th>
             </tr>";
-        while ($result = mysqli_fetch_row($req)) {
+
             echo "  <tr>";
             echo "
                     <td>$result[0]</td>
