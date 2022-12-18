@@ -14,7 +14,7 @@ function Select($snm = 0)
 function insert($data)
 {
     global $con;
-    $req = "INSERT INTO `absence`(`semaine`, `cne`, `nbr_abs`) VALUES({$data[0]},{$data[1]},{$data[2]})";
+    $req = " INSERT INTO absence VALUES({$data[0]},{$data[1]},{$data[2]}) ";
     return mysqli_query($con, $req);
 }
 
