@@ -54,6 +54,33 @@ $req = Select();
         ?>
     </table>
     <center> <a href="../../index.php"><i class="fa-solid fa-house"></i> Reteur</a></center>
+    <center>
+        <form action="" method="post">
+            <label for="snm">Semaine : </label>&nbsp;&nbsp;
+            <input type="text" name="snm">&nbsp;&nbsp;
+            <input type="submit" value="Valider" name="sub">&nbsp;&nbsp;
+            <input type="reset" value="Annuler"><br><br>
+        </form>
+    </center>
+    <?php
+    if (isset($_POST["sub"])) {
+        $req = nbr_elv($_POST["snm"]);
+        echo "<h1>Liste d'absences de l'eleve " . $result[2] . "</h1>";
+        echo "<table border='2'>
+            <tr>
+                <th>Semaine</th>
+                <th>Nobmre d'absences</th>
+            </tr>";
+        while ($result = mysqli_fetch_row($req)) {
+            echo "  <tr>";
+            echo "
+                    <td>$result[0]</td>
+                    <td>$result[1]</td>";
+            echo "  </tr>";
+        }
+        echo "</table> ";
+    }
+    ?>
 </body>
 
 </html>
