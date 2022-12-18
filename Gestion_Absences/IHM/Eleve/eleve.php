@@ -20,6 +20,16 @@
             width: 100%;
             margin-bottom: 25px;
         }
+
+        p {
+            font-size: 20px;
+            font-family: cursive;
+        }
+
+        span {
+            color: red;
+            font-size: 25px;
+        }
     </style>
 </head>
 <?php
@@ -66,6 +76,7 @@ $req = Select();
     if (isset($_POST["sub"])) {
         $req = nbr_elv($_POST["snm"]);
         while ($result = mysqli_fetch_row($req)) {
+            echo "<center><p>Dans la semaine $result[0] l'eleve ayant le CNE $result[2]<span> a $result[1] absences.</span> </p></center> ";
             echo "<h1>Liste d'absences de l'eleve " . $result[2] . "</h1>";
             echo "<table border='2'>
             <tr>
